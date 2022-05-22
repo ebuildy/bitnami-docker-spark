@@ -36,7 +36,7 @@ case "$1" in
     CMD=(
         "/opt/bitnami/spark/bin/spark-submit"
         --master "${SPARK_MASTER_URL}"
-        --conf "spark.jars.ivy=/tmp/.ivy"
+        --conf "spark.jars.ivy=/opt/bitnami/spark/tmp/.ivy"
         --deploy-mode client
         "$@"
     )
